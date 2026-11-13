@@ -1,0 +1,40 @@
+{
+  "id": "dnd-dm-exporter",
+  "title": "D&D DM-Dashboard – Exporter",
+  "description": "Nur lesender Export ausdrücklich ausgewählter Charaktere, Monster, Items, Zauber, Charakteroptionen und Welt-Journals mit Offline-Bildern.",
+  "version": "0.30.0",
+  "compatibility": {
+    "minimum": "14",
+    "maximum": "14",
+    "verified": "14.369"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "6.0.3",
+          "verified": "6.1.0"
+        }
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/main.mjs"
+  ],
+  "authors": [
+    {
+      "name": "Daniel Brune (incl. ChatGPT-KI-Assistent)",
+      "discord": "arukard",
+      "email": "daniel@brunecoaching.de",
+      "url": "https://dnd.brunecoaching.de"
+    }
+  ],
+  "styles": [
+    "styles/monster-dialog.css"
+  ],
+  "url": "https://github.com/666Arukard/DM-Dashboard-Exporter",
+  "manifest": "https://github.com/666Arukard/DM-Dashboard-Exporter/releases/latest/download/module.json",
+  "download": "https://github.com/666Arukard/DM-Dashboard-Exporter/releases/download/v0.30.0/dnd-dm-exporter-0.30.0.zip"
+}
