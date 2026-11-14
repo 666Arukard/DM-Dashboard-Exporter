@@ -6,11 +6,11 @@ import {exportCharacter,systemWarnings,assertEnvironment} from '../scripts/expor
 import {characterDetails} from '../scripts/character-details.mjs';
 import {monsterStatblock} from '../scripts/monster-statblock.mjs';
 import {armorDetails} from '../scripts/export-item.mjs';
-test('14.369 / 6.1.0 / DDB 7.6.1: Versionsfreigabe und vorbereitete Werte',()=>{
- const game=gameFixture();game.version='14.369';game.release.build=369;game.system.version='6.1.0';game.modules.set('ddb-importer',{version:'7.6.1'});
+test('14.370 / 6.1.0 / DDB 7.6.2: Versionsfreigabe und vorbereitete Werte',()=>{
+ const game=gameFixture();game.version='14.370';game.release.build=370;game.system.version='6.1.0';game.modules.set('ddb-importer',{version:'7.6.2'});
  const notices=[];globalThis.ui={notifications:{warn:x=>notices.push(x)}};
  try{assertEnvironment(game);assert.deepEqual(notices,[]);assert.deepEqual(systemWarnings(game),[]);
- const data=exportCharacter(game,'test-hero');assert.equal(data.source.foundryBuild,369);assert.equal(data.source.ddbImporterVersion,'7.6.1');assert.equal(data.character.armorClass,16);assert.equal(data.character.hp.current,17);assert.ok(!data.warnings.some(w=>/Foundry-Build/.test(w)));
+ const data=exportCharacter(game,'test-hero');assert.equal(data.source.foundryBuild,370);assert.equal(data.source.ddbImporterVersion,'7.6.2');assert.equal(data.character.armorClass,16);assert.equal(data.character.hp.current,17);assert.ok(!data.warnings.some(w=>/Foundry-Build/.test(w)));
  game.system.version='6.1.1';assert.equal(systemWarnings(game).length,1);game.system.version='6.1.0-beta.1';assert.equal(systemWarnings(game).length,1);
  }finally{delete globalThis.ui;}
 });

@@ -3,7 +3,7 @@ import { attachImages } from './images.mjs';
 import { embeddedItems } from './embedded-items.mjs';
 import { characterDetails } from "./character-details.mjs";
 export const MODULE_ID = "dnd-dm-exporter";
-export const MODULE_VERSION = "0.30.0";
+export const MODULE_VERSION = "0.30.1";
 
 const notifiedVersions=new Set();
 export function assertEnvironment(game) {
@@ -50,8 +50,8 @@ export function exportCharacter(game, actorId, selection = null, now = new Date(
     warnings.push(`${label}: kein gültiger Zahlenwert verfügbar; als null exportiert.`);
     return null;
   };
-  if (![368,369].includes(Number(game.release.build))) {
-    warnings.push("Dieser Foundry-Build weicht vom geprüften Stand 14.368/14.369 ab. Werte vor Verwendung mit Foundry vergleichen.");
+  if (![368,369,370].includes(Number(game.release.build))) {
+    warnings.push("Dieser Foundry-Build weicht vom geprüften Stand 14.368/14.369/14.370 ab. Werte vor Verwendung mit Foundry vergleichen.");
   }
   const attributes = actor.system?.attributes ?? {};
   let combatTotal = null;
