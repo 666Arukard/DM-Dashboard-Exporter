@@ -11,7 +11,7 @@ test('14.370 / 6.1.0 / DDB 7.6.2: Versionsfreigabe und vorbereitete Werte',()=>{
  const notices=[];globalThis.ui={notifications:{warn:x=>notices.push(x)}};
  try{assertEnvironment(game);assert.deepEqual(notices,[]);assert.deepEqual(systemWarnings(game),[]);
  const data=exportCharacter(game,'test-hero');assert.equal(data.source.foundryBuild,370);assert.equal(data.source.ddbImporterVersion,'7.6.2');assert.equal(data.character.armorClass,16);assert.equal(data.character.hp.current,17);assert.ok(!data.warnings.some(w=>/Foundry-Build/.test(w)));
- game.system.version='6.1.1';assert.equal(systemWarnings(game).length,1);game.system.version='6.1.0-beta.1';assert.equal(systemWarnings(game).length,1);
+ game.system.version='6.1.1';assertEnvironment(game);assert.deepEqual(systemWarnings(game),[]);assert.deepEqual(notices,[]);assert.ok(!exportCharacter(game,'test-hero').warnings.some(w=>w.includes('ungeprüfte Spielsystemversion')));game.system.version='6.1.2';assert.equal(systemWarnings(game).length,1);game.system.version='6.1.0-beta.1';assert.equal(systemWarnings(game).length,1);
  }finally{delete globalThis.ui;}
 });
 test('6.1.0: spezielle Resistenzen und zusätzliche NPC-Anzeigen ohne Zahlenüberschreibung',()=>{

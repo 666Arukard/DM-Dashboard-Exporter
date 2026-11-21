@@ -3,7 +3,7 @@ import { attachImages } from './images.mjs';
 import { embeddedItems } from './embedded-items.mjs';
 import { characterDetails } from "./character-details.mjs";
 export const MODULE_ID = "dnd-dm-exporter";
-export const MODULE_VERSION = "0.30.1";
+export const MODULE_VERSION = "0.30.2";
 
 const notifiedVersions=new Set();
 export function assertEnvironment(game) {
@@ -156,5 +156,5 @@ export async function exportCharacterWithImages(game, actorId, selection = null,
 
 /** Zulassung neuer Versionen ist keine Aussage über geprüfte Feldkompatibilität. */
 export function systemWarnings(game){
- return ['6.0.3','6.0.4','6.0.5','6.0.6','6.1.0'].includes(game.system?.version)?[]:[`D&D5e ${game.system?.version}: noch ungeprüfte Spielsystemversion. Exportwerte mit Foundry vergleichen; geänderte Felder können fehlen.`];
+ return ['6.0.3','6.0.4','6.0.5','6.0.6','6.1.0','6.1.1'].includes(game.system?.version)?[]:[`D&D5e ${game.system?.version}: noch ungeprüfte Spielsystemversion. Exportwerte mit Foundry vergleichen; geänderte Felder können fehlen.`];
 }

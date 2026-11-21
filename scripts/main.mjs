@@ -151,7 +151,7 @@ Hooks.once("init", () => {
   game.settings.registerMenu(MODULE_ID, "monsterExport", { name: "Ein Monster aus einem Compendium exportieren", label: "Monsterexport öffnen", hint: "Statblock als JSON oder per gekoppeltem Netzwerkabruf. Foundry-Daten bleiben unverändert.", icon: "fa-solid fa-dragon", type: MonsterExportDialog, restricted: true });
   game.settings.registerMenu(MODULE_ID, "characterExport", {
     name: "Ausgewählte Charaktere exportieren", label: "Charakterexport öffnen",
-    hint: "Prototyp 0.30.1 für Foundry 14 / D&D5e ab 6.0.3. Neuere ungeprüfte Versionen mit Hinweis. JSON-Download oder Verbindung mit dem lokalen Testprogramm.",
+    hint: "Prototyp 0.30.2 für Foundry 14 / D&D5e ab 6.0.3. Neuere ungeprüfte Versionen mit Hinweis. JSON-Download oder Verbindung mit dem lokalen Testprogramm.",
     icon: "fa-solid fa-file-export", type: CharacterExportDialog, restricted: true
   });
 });

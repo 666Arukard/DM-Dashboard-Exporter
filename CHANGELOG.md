@@ -1,3 +1,8 @@
+# 0.30.2
+
+- D&D5e 6.1.1 nach Nutzer-Praxistest freigegeben; entsprechende Login- und Exportwarnung entfällt.
+- Warnungen für noch ungeprüfte Versionen bleiben bestehen.
+
 # 0.30.1
 
 - Kompatibilitätsangabe und interne Freigabe für Foundry 14.370 aktualisiert.
